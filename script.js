@@ -82,6 +82,9 @@ let lastScrollY = window.scrollY;
 const scrollTopBtn = document.querySelector(".footer-iconTop");
 
 window.addEventListener("scroll", () => {
+
+    if(!scrollTopBtn) return;
+
     if (window.scrollY > 200 && window.scrollY > lastScrollY) {
         // Scrolling down
         scrollTopBtn.classList.add("show");
