@@ -56,7 +56,6 @@ section {
     cursor: default;
 }
 
-/* Hide menu icon by default */
 #menu-icon {
     font-size: 2.5rem;
     color: #fff;
@@ -64,7 +63,6 @@ section {
     cursor: pointer;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
     .navbar {
         position: absolute;
@@ -94,7 +92,6 @@ section {
         right: 0;
     }
 }
-
 
 .navbar {
     display: flex;
@@ -136,17 +133,9 @@ section {
 }
 
 @keyframes floatImage {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-2.4rem);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-2.4rem); }
+    100% { transform: translateY(0); }
 }
 
 .home-content {
@@ -208,7 +197,6 @@ span {
     font-weight: 600;
     transition: 0.5s ease;
     margin-bottom: 20px;
-    margin-bottom: 20px;
 }
 
 .btn:hover {
@@ -249,18 +237,69 @@ span {
     margin: 2rem 0 3rem;
 }
 
-.about-content .heading {
-    text-align: center;
-    font-size: 4.5rem;
-    margin-bottom: 50px;
-}
-
 .heading {
     text-align: center;
     font-size: 4.5rem;
 }
 
-/* skills */
+/* Expertise Section */
+.expertise {
+    background-color: var(--bg-color);
+}
+
+.expertise .heading {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 50px;
+}
+
+.expertise-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2.5rem;
+}
+
+.expertise-box {
+    background: var(--second-bg-color);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    text-align: left;
+    transition: 0.5s ease;
+    border: 0.2rem solid var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.expertise-box:hover {
+    transform: scale(1.02);
+    border-color: var(--main-color);
+}
+
+.expertise-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.expertise-header i {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+.expertise-header h3 {
+    font-size: 2.4rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.expertise-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Skills Section */
 .skills {
     background-color: var(--bg-color);
 }
@@ -271,9 +310,27 @@ span {
     margin-bottom: 50px;
 }
 
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.category-title {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: 2.5rem;
 }
 
@@ -289,7 +346,7 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 180px;
 }
 
 .skills-box:hover {
@@ -310,70 +367,20 @@ span {
     margin: 2px;
 }
 
-/* Services + Portfolio Grid */
-.services {
-    background-color: var(--second-bg-color);
-}
-
-.services h2 {
-    margin-bottom: 5rem;
-    text-align: center;
-}
-
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2.5rem;
-}
-
-.services-box {
-    background: var(--bg-color);
-    padding: 3rem 2rem;
-    border-radius: 2rem;
-    text-align: left;
-    transition: 0.5s ease;
-    border: 0.2rem solid var(--bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
-}
-
-.services-box:hover {
-    transform: scale(1.02);
-    border-color: var(--main-color);
-}
-
-.service-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.service-header i {
-    font-size: 4rem;
-    color: var(--main-color);
-}
-
-.service-header h3 {
-    font-size: 2.4rem;
-    margin: 0;
-    color: var(--text-color);
-}
-
-.services-box p {
-    font-size: 1.6rem;
-    margin: 1rem 0 0;
-    line-height: 1.6;
-    color: var(--text-color);
-}
-
-/* Portfolio Hover Effects */
+/* Portfolio Section */
 .portfolio {
     background-color: var(--bg-color);
 }
 
-.portfolio h2 {
-    margin-bottom: 5rem;
+.portfolio .heading {
+    margin-bottom: 2rem;
+}
+
+.portfolio-intro {
     text-align: center;
+    font-size: 1.8rem;
+    color: #999;
+    margin-bottom: 4rem;
 }
 
 .portfolio-container {
@@ -382,16 +389,8 @@ span {
     gap: 2.5rem;
 }
 
-.portfolio-box h3 {
-    margin-bottom: 10px;
-    font-size: 2rem;
-    text-align: center;
-    color: var(--text-color);
-}
-
 .portfolio-box {
     position: relative;
-    box-shadow: 0 0 2rem var(--second-bg-color);
     background: var(--second-bg-color);
     padding: 3rem 2rem;
     border-radius: 2rem;
@@ -401,124 +400,86 @@ span {
     box-shadow: 0 0 1rem var(--main-color);
 }
 
+.portfolio-box.featured {
+    grid-column: span 1;
+    border-color: var(--main-color);
+}
+
 .portfolio-box:hover {
     transform: scale(1.02);
     border-color: var(--main-color);
 }
 
+.portfolio-box h3 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.project-badge {
+    display: inline-block;
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
 .portfolio-box img {
     width: 100%;
     display: block;
-    margin: 0 auto;
-}
-
-.portfolio-layer {
-    display: flex;
-    flex-direction: column;
-    transition: 0.5s ease;
+    margin: 1rem auto;
+    border-radius: 1rem;
 }
 
 .portfolio-layer p {
     font-size: 1.5rem;
     margin-top: 10px;
+    line-height: 1.6;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+
+.tech-tag {
+    display: inline-block;
+    background: rgba(113, 39, 186, 0.2);
+    color: var(--main-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    border: 0.1rem solid var(--main-color);
 }
 
 .external-link {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
     margin-top: 20px;
-    padding: 10px;
-    font-size: 2rem;
+    padding: 10px 15px;
+    font-size: 1.6rem;
     border-radius: 10px;
-    color: var(--main-color);
-    font-weight: 600;
-    transition: 0.5s ease;
     color: var(--second-bg-color);
     background: var(--main-color);
+    font-weight: 600;
+    transition: 0.5s ease;
 }
 
 .external-link:hover {
-    color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
-    background: var(--main-color);
-}
-
-.tech-icons {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 2rem;
-    color: var(--text-color);
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-}
-
-.tech-icons h4 {
-    font-size: 2rem;
-    color: var(--text-color);
-}
-
-.tech-icons i {
-    font-size: 2.5rem;
-    margin-right: 6px;
 }
 
 .view-link {
     text-align: left;
 }
-
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content {
-    background-color: var(--second-bg-color);
-    margin: auto;
-    padding: 30px;
-    border-radius: 15px;
-    width: 80%;
-    max-width: 600px;
-    color: var(--text-color);
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-.close {
-    color: var(--main-color);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #fff;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-
 
 /* Contact Section */
 .contact {
@@ -527,48 +488,31 @@ span {
 
 .contact .heading {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-subtitle {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #999;
+    margin-bottom: 3rem;
 }
 
 .contact-info {
-    margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 2rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    vertical-align: middle;
-    align-items: center;
-
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
 }
 
-.contact-info p,
-.contact-info a {
-    font-size: 1.6rem;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    display: block;
-    margin: 10px;
-}
-
-
-.contact-info p {
-    font-size: 2.5rem;
-    font-weight: 600;
+.contact-item {
     display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
 }
 
-.contact-info a {
-    color: var(--text-color);
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-.contact-info i {
-    display: inline-flex;
+.contact-item i {
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 5rem;
@@ -577,27 +521,42 @@ span {
     border-radius: 50%;
     font-size: 2rem;
     color: var(--bg-color);
+    flex-shrink: 0;
 }
 
+.contact-item div {
+    flex-grow: 1;
+}
+
+.contact-item h4 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.contact-item a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.contact-item a:hover {
+    color: var(--main-color);
+}
 
 /* Footer */
 .footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding: 2rem 9%;
     background: var(--bg-color);
 }
 
 .footer-text {
-    display: flex;
-    flex-direction: row;
-    font-size: 15px;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
     color: var(--text-color);
+    font-size: 1.5rem;
 }
 
 /* Responsive Design */
@@ -647,8 +606,7 @@ span {
     }
 
     .home-content,
-    .about-content,
-    .skills-container {
+    .about-content {
         text-align: center;
     }
 
@@ -677,105 +635,8 @@ span {
     }
 
     .portfolio-container,
-    .services-container,
+    .expertise-container,
     .skills-container {
         grid-template-columns: 1fr;
-    }
-}
-
-/* ----------- Tablets (max-width: 1024px) ----------- */
-@media (max-width: 1024px) {
-    .skills .heading {
-        font-size: 4rem;
-        margin-bottom: 4rem;
-    }
-
-    .skills-box {
-        padding: 2.5rem 2rem;
-    }
-
-    .skills-box h3 {
-        font-size: 2.3rem;
-    }
-
-    .skills-box h4 {
-        font-size: 1.5rem;
-        line-height: 2.8rem;
-    }
-
-    .skills-box p,
-    .footer-text p {
-        font-size: 1.5rem;
-        line-height: 2.8rem;
-    }
-}
-
-/* ----------- Mobile & Small Tablets (max-width: 768px) ----------- */
-@media (max-width: 768px) {
-    .skills .heading {
-        font-size: 3.2rem;
-        margin-bottom: 3rem;
-        text-align: center;
-    }
-
-    .skills-container {
-        gap: 2rem;
-        padding: 0 5%;
-    }
-
-    .skills-box {
-        padding: 2rem 1.5rem;
-    }
-
-    .skills-box h3,
-    .skills-box p {
-        font-size: 2rem;
-    }
-
-    .skills-box h4 {
-        font-size: 1.4rem;
-        line-height: 2.5rem;
-    }
-
-    .footer-text p {
-        font-size: 1.4rem;
-        line-height: 2.5rem;
-    }
-
-    .skills-detail {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-/* ----------- Mobile Phones (max-width: 480px) ----------- */
-@media (max-width: 480px) {
-    .skills .heading {
-        font-size: 2.8rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .skills-container {
-        gap: 1.5rem;
-        padding: 0 5%;
-    }
-
-    .skills-box {
-        padding: 1.5rem 1rem;
-    }
-
-    .skills-box h3,
-    .skills-box p {
-        font-size: 1.8rem;
-    }
-
-    .skills-box h4 {
-        font-size: 1.2rem;
-        line-height: 2.2rem;
-    }
-
-    .footer-text p {
-        font-size: 1.2rem;
-        line-height: 2.2rem;
     }
 }

@@ -6,9 +6,8 @@ let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
     navbar.classList.toggle('active');
-    menuIcon.classList.toggle('bx-x'); // change icon to 'X'
+    menuIcon.classList.toggle('bx-x');
 };
-
 
 navLinks.forEach(link => {
     link.onclick = () => {
@@ -16,7 +15,6 @@ navLinks.forEach(link => {
         menuIcon.classList.remove('bx-x');
     };
 });
-
 
 window.onscroll = () => {
     let top = window.scrollY;
@@ -38,12 +36,9 @@ window.onscroll = () => {
         }
     });
 
-
     let header = document.querySelector('header');
-
     header.classList.toggle('sticky', window.scrollY > 100);
 };
-
 
 ScrollReveal({
     reset: true,
@@ -53,45 +48,17 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact-info', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .expertise-container, .portfolio-box, .contact-info', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-
 const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Full Stack Developer'],
-    typeSpeed: 100,
-    backSpeed: 100,
+    strings: ["Data Analyst",
+        "Data Scientist",
+        "Data Engineer",
+        "Cloud Professional"],
+    typeSpeed: 80,
+    backSpeed: 50,
     backDelay: 1000,
     loop: true
 });
-
-// Get all buttons
-const viewButtons = document.querySelectorAll('.view-btn');
-
-viewButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const details = button.nextElementSibling;
-        details.classList.toggle('hidden');
-        button.textContent = details.classList.contains('hidden') ? 'View' : 'Hide';
-    });
-});
-
-
-let lastScrollY = window.scrollY;
-const scrollTopBtn = document.querySelector(".footer-iconTop");
-
-window.addEventListener("scroll", () => {
-
-    if(!scrollTopBtn) return;
-
-    if (window.scrollY > 200 && window.scrollY > lastScrollY) {
-        // Scrolling down
-        scrollTopBtn.classList.add("show");
-    } else {
-        // Scrolling up or near top
-        scrollTopBtn.classList.remove("show");
-    }
-    lastScrollY = window.scrollY;
-});
-
