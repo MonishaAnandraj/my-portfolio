@@ -55,8 +55,8 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 const typed = new Typed('.multiple-text', {
     strings: ["Data Analyst",
         "Data Scientist",
-        "Data Engineer",
-        "Cloud Professional"],
+        "Cloud Engineer",
+        "Full Stack Developer"],
     typeSpeed: 80,
     backSpeed: 50,
     backDelay: 1000,
