@@ -451,7 +451,7 @@ span {
 .tech-tag {
     display: inline-block;
     background: rgba(113, 39, 186, 0.2);
-    color: var(--main-color);
+    color: white;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     font-size: 1.2rem;
